@@ -8,9 +8,9 @@ output "processed_bucket_name" {
     value = aws_s3_bucket.processed_bucket.id
 }
 
-output "lambda_fucation_name" {
+output "lambda_function_name" {
     description = "Lamdba function name for the image processing"
-    value = aws_lambda_function.image_processing.function_name
+    value = aws_lambda_function.image_processing.function_name 
 }
 
 output "region" {
