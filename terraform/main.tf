@@ -162,8 +162,8 @@ resource "aws_lambda_layer_version" "pillow_layer" {
 # data source for the  lamda function zip
 data "archive_file" "lambda_zip" {
     type = "zip"
-    source_file = "${path.module}/../lamda/lamda_fuction.py"
-    output_path = "${path.module}/lamda_function.zip"
+    source_file = "${path.module}/../lambda/lambda_function.py"
+     output_path = "${path.module}/lambda_function.zip"
 }
 
 # lamda function for the image processing
