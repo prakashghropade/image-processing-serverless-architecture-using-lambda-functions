@@ -1,5 +1,5 @@
 variable "project_name" {
- default = "prakas_lamda_function_project"
+ default = "prakas-lamda-function-project"
  description = "This is the project name for the lamda functions" 
  type = string 
 }
