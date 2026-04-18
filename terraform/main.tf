@@ -74,7 +74,7 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "processed_bucket"
 
     rule {
       apply_server_side_encryption_by_default {
-        sse_algorithm = "AEC256"
+        sse_algorithm = "AES256"
       }
     }
   
@@ -155,7 +155,7 @@ resource "aws_iam_role_policy" "lamda_policy" {
 resource "aws_lambda_layer_version" "pillow_layer" {
     filename = "${path.module}/pillow_layer.zip"
     layer_name = "${var.project_name}-pillow-layer"
-    compatible_runtimes = ["python2.12"]
+    compatible_runtimes = ["python3.12"]
     description = "Pillow library for image processing"
 }
 
